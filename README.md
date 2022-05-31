@@ -1,6 +1,8 @@
 # Desafio de projeto de Git/GitHub da DIO
 
-Repositório criado para o desafio de Projetos
+Comecei a fazer um bootcamp gratuito na dio.me e este foi minha primeira experiência com o Git e GitHub, curti pra caramba e acho que entendi. Bora aprender a programar !!!
+
+Repositório criado para o desafio de Projetos. 
 
 ## Links Úteis
 
