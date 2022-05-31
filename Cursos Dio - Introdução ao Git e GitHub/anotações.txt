@@ -1,4 +1,75 @@
 ##Link para download do git:
 https://git-scm.com/download/win
 
--- 
+--  o curso está todo no trello - acessar minha conta do trello
+
+Comandos basicos cmd windows e linux
+
+**Windows**
+- Cd
+- dir
+- mkdir
+- del/ rmdir
+
+**Unix**
+- cd
+- ls
+- mkdir
+- rm -rf
+
+SHA1 é um algoritmo de encriptação. (Secure Hash Algorithm)
+gera um conjunto de caracteres de 40 digitos, para cada alteração, cada versão. - Quando você edita algo, ele gera outros 40 digitos, se volta a questão anterior ele gera o mesmo 40 digitos anterior
+é uma forma curta de representar um arquivo.
+
+objetos internos do git
+Blobs
+Trees
+Commits
+são 3 tipos básicos de objetos do git responsáveis pelo versionamento do código.
+esses objetos específicos do git são através de objetos. 
+os arquivos ficam guardados dentro desses objetos chamados Blobs
+esses objetos contém metadados dentro dele.
+O objeto blob vai ter:
+o tipo do objeto, o tamanho dessa string ou arquivos
+uma barras \0 
+e o conteúdo desse arquivo
+
+Essa é a estrutura básica de uma blob
+
+o segundo objeto são as trees, elas armazenam blobs
+é uma crescente. as blobs são o objeto báscio de composição a tree armazena e aponta para tipos de blobs diferentes e um outro tipo de estrutura de dados é os commits, a tree também tem metadados \0 , aponta para um blob que por sua vez tem um sha1, e a tree também guarda o "nome do arquivo", enquanto o blob só guarda o sha1 do objeto. 
+
+a tree vai apontar para uma estrutura de onde estão localizados os arquivos. elas podem apontar para outras blobs e outras trees. 
+
+commit 
+- o objeto mais importante de todos , ele vai juntar tudo e dar sentido para a alteração que você está fazendo.
+o commit aponta para uma arvore,
+commit aponta para um parente , para o ultimo commit realizado antes dele, 
+commit aponta para o autor, e para a mensagem também. 
+o commit tem um tempo também. ele leva a data e hora que ele foi criado.
+
+os commit também possuem um sha1, uma criptação dos seus metadados, isso significa que se voce alterar um dado dentro de uma blob, ele vai gerar um sha1 daquela blob, consequentemente tem uma arvore, que vai ter uma sha1 alterara, e também a commit também vai ter alterado..... ou seja, a mais mínima alteração que é feita, ele ja altera o sha1 da commit, arvores e toda a cadeia. 
+
+quando você tem um commit, voce ta garantindo que ninguém alterou aquele commit. 
+
+**Chaves SSH e Tokens**
+
+criar uma conta no github e ele é autenticado através de 2 chaves de autenticação. 
+você precisa instalar as chaves de autenticação no seu pc, e depois associar ela ao github
+tem um caminho e alguns comandos.
+
+**primeiros comandos com o git**
+- git init (iniciar o repositorio)
+- git add (mover arquivos, etc)
+- git commit (criar um commit)
+
+comando criar pasta (mkdir livro-receitas)
+comando iniciar o git 
+
+###**ciclo de vida**
+untracked
+unmodified
+modified
+staged
+
+
